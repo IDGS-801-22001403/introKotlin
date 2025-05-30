@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.introkotlin_901.cinepolis.Cinepolis
+import com.example.introkotlin_901.diccionario.Diccionario
 import com.example.introkotlin_901.ejemplo1.Operaciones
 import com.example.introkotlin_901.ejemplo2.Resultado
 
@@ -19,12 +20,16 @@ class MenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu)
         val btnSaludo = findViewById<Button>(R.id.btn1)
         val btnResultado = findViewById<Button>(R.id.btn2)
+        val btnDiccio = findViewById<Button>(R.id.btnDiccionario)
 
         btnSaludo.setOnClickListener{navegateToSaludo()
 
         }
         btnResultado.setOnClickListener {
             navegateToResultado()
+        }
+        btnDiccio.setOnClickListener{
+            navegateToDiccionario()
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -42,4 +47,9 @@ class MenuActivity : AppCompatActivity() {
         val intent = Intent(this, Resultado::class.java)
         startActivity(intent)
     }
+    private fun navegateToDiccionario(){
+        val intent = Intent(this, Diccionario::class.java)
+        startActivity(intent)
+    }
+
 }

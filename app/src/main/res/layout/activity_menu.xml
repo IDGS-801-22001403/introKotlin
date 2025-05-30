@@ -25,6 +25,13 @@
         android:text="Ejemplo 2"
         app:layout_constraintTop_toTopOf="parent"
         />
+    <Button
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDiccionario"
+        android:text="Diccionario"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
 </LinearLayout>
